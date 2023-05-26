@@ -37,3 +37,8 @@ $ docker run shaandev/mc-status
 ```
 
 You can add `-d` flag to run the server in detached mode.
+
+## Support This Project
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/shaanjp)
+
