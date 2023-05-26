@@ -1,7 +1,7 @@
 {
   "name": "mc-status",
   "version": "1.0.0",
-  "description": "A simple discord bot get server your minecraft server status, Version & player count",
+  "description": "A simple discord bot to display your minecraft server status, Version & player count",
   "main": "app.js",
   "scripts": {
     "test": "node ."
