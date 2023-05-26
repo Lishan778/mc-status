@@ -25,3 +25,15 @@ SERVER_IP = < SERVER IP WITH PORT EXAMPLE 0.0.0.0:0000 >
 ```bash
 node app.js or node .
 ```
+
+### Docker
+Docker image is available at [Docker Hub](https://hub.docker.com/r/shaandev/mc-status).
+
+run the following command to pull and run the docker image.
+
+```sh
+$ docker pull shaandev/mc-status
+$ docker run shaandev/mc-status
+```
+
+You can add `-d` flag to run the server in detached mode.
