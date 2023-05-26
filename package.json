@@ -1,0 +1,30 @@
+{
+  "name": "mc-status",
+  "version": "1.0.0",
+  "description": "A simple discord bot get server your minecraft server status, Version & player count",
+  "main": "app.js",
+  "scripts": {
+    "test": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lishan778/mc-status.git"
+  },
+  "keywords": [
+    "mc-status",
+    "status",
+    "minecraft-status",
+    "mc-server"
+  ],
+  "author": "shaan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lishan778/mc-status/issues"
+  },
+  "homepage": "https://github.com/Lishan778/mc-status#readme",
+  "dependencies": {
+    "discord.js": "^13.3.1",
+    "dotenv": "^16.0.3",
+    "minecraft-server-util": "^5.4.4"
+  }
+}
