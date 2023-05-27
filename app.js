@@ -17,12 +17,19 @@ async function updateStatus() {
         message.edit({ embeds: [embed] });
         const response = await axios.get(api_url);
         const data = response.data;
-        const version = data.version.name_clean;
-        const players_online = data.players.online;
-        const players_max = data.players.max;
-        const online_status = data.online;
-        embed.setDescription(`Server Status: ${online_status ? 'Online :green_circle:' : 'Offline :red_circle:'}\nVersion: ${version}\nPlayers: ${players_online}/${players_max}`);
-        message.edit({ embeds: [embed] });
+        if (data.online === false) {
+            embed.setDescription(`Server Status: Offline :red_circle:`);
+            message.edit({ embeds: [embed] });
+        } else {
+            const version = data.version.name_clean;
+            const players_online = data.players.online;
+            const players_max = data.players.max;
+            const online_status = data.online;
+            if (online_status === true) {
+                embed.setDescription(`Online :green_circle:\nVersion: ${version}\nPlayers: ${players_online}/${players_max}`);
+                message.edit({ embeds: [embed] });
+            }
+        }
     }, 60000);
 }
 
