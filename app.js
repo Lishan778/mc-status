@@ -7,9 +7,16 @@ const channel_id = process.env.CHANNEL_ID;
 
 async function updateStatus() {
     const channel = await client.channels.fetch(channel_id);
+    const messages = await channel.messages.fetch({ limit: 1 });
+    const lastMessage = messages.first();
+    if (lastMessage && lastMessage.author.id === client.user.id) {
+        // The last message was sent by the bot
+        // Edit or delete the message here
+        lastMessage.delete();
+    }
     const embed = new Discord.MessageEmbed()
         .setTitle('Server Status')
-        .setColor('#0099ff')
+        .setColor('#000000')
         .setDescription('Getting server info...');
     let message = await channel.send({ embeds: [embed] });
     setInterval(async () => {
